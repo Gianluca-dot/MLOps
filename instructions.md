@@ -10,5 +10,18 @@ Se utilizzi il browser (es. Google Chrome) con la traduzione automatica attiva, 
 ### 1. Esecuzione dei Test Locali (con Pytest)
 Per verificare che tutti i moduli (`src/`) e i test (`tests/`) funzionino correttamente:
 ```bash
+
+# Dipendenze
 pip install -r requirements.txt
+
+# Test unitari
 pytest -v
+
+# Valutazione e metriche
+python src/evaluate.py
+
+# Training / Retraining
+python src/train.py
+
+# Dashboard Streamlit
+streamlit run app.py

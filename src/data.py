@@ -1,14 +1,16 @@
 import pandas as pd
 from datasets import load_dataset
 
+
 def load_data():
-    """Carica il dataset di sentiment analysis (es. Twitter RoBERTa sentiment)."""
+    """Carica un campione del dataset tweet_eval per la Sentiment Analysis."""
     print("📥 Caricamento del dataset in corso...")
-    # Dataset di esempio per sentiment monitoring
-    dataset = load_dataset("tweet_eval", "sentiment", split="train[:100]")
+    # Utilizza il path canonico 'cardiffnlp/tweet_eval' per la piena compatibilità con huggingface_hub
+    dataset = load_dataset("cardiffnlp/tweet_eval", "sentiment", split="train[:100]")
     df = pd.DataFrame(dataset)
     return df
 
+
 if __name__ == "__main__":
     df = load_data()
-    print(f"✅ Dataset caricato con successo. Righe: {len(df)}")
+    print(f"✅ Dati caricati con successo. Formato DataFrame: {df.shape}")

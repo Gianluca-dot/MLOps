@@ -2,9 +2,9 @@ import streamlit as st
 import json
 import os
 
-st.set_page_config(page_title="MLOps Sentiments Monitoring", page_icon="📊", layout="wide")
+st.set_page_config(page_title="MLOps", page_icon="📊", layout="wide")
 
-st.title("📊 MLOps Sentiments Monitoring Dashboard")
+st.title("📊 MLOps Dashboard")
 st.markdown("Monitoraggio in tempo reale delle performance del modello di Sentiment Analysis.")
 
 # Caricamento metriche

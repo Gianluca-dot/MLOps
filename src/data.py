@@ -5,7 +5,7 @@ def load_data():
     """Carica il dataset di sentiment analysis (es. Twitter RoBERTa sentiment)."""
     print("📥 Caricamento del dataset in corso...")
     # Dataset di esempio per sentiment monitoring
-    dataset = load_dataset("cardiffnlp/twitter_sentiment_multilingual", "en", split="train[:100]")
+   dataset = load_dataset("tweet_eval", "sentiment", split="train[:100]")
     df = pd.DataFrame(dataset)
     return df
 

@@ -1,5 +1,6 @@
 import torch
-from transformers import PreTrainedTokenizer, torch.nn as nn
+import torch.nn as nn
+from transformers import PreTrainedTokenizer
 from src.model import load_sentiment_model
 
 def test_load_sentiment_model():
